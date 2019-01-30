@@ -1,17 +1,13 @@
 import React, { Component } from 'react';
-import NavBtns from './components/NavButtons';
-import Hotels from './components/Hotel';
+
+import Wrapper from './components/Wrapper';
 import './styles/App.css';
 
 
 class App extends Component {
     render(){
         return (
-            <div class="main">
-                <NavBtns />
-                <Hotels />
-            </div>
-            
+                <Wrapper />
         );
     };
 };
