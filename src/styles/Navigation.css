@@ -1,0 +1,11 @@
+header {
+    width: 40%;
+    height: 100px;
+    background-color: whitesmoke;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.nav-btn  {
+    width: 25%;
+}

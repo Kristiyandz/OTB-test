@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import NavBtns from './components/NavButtons';
+import Hotels from './components/Hotel';
 import './styles/App.css';
 
 
@@ -6,7 +8,8 @@ class App extends Component {
     render(){
         return (
             <div class="main">
-                <h1>Hello World!</h1>
+                <NavBtns />
+                <Hotels />
             </div>
             
         );

@@ -1,0 +1,8 @@
+section {
+    width: 50%;
+    height: 100px;
+    background-color: yellow;
+    margin-top: 20%;
+    border: 1px solid black;
+    flex-direction: column;
+}
