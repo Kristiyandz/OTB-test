@@ -8,6 +8,7 @@ class Hotel extends Component {
     componentDidMount() {
         const button = document.getElementsByClassName('accordion');
         const hotel = document.getElementsByClassName('hotel');
+        const accordion = document.getElementsByClassName('hotel-click-info');
         let clickCount = 0;
 
 
@@ -17,20 +18,16 @@ class Hotel extends Component {
 
                 clickCount++;
                 if(clickCount % 2 === 0) {
-                    hotel[i].style.height = "250px";
+                    hotel[i].style.height = "350px";
                     button[i].style.height = "50px";
                 } else if(clickCount % 2 === 1) {
-                    hotel[i].style.height = "400px";
+                    hotel[i].style.height = "500px";
                     button[i].style.height = "200px";
                 };
                 
             })
 
         };
-      
-           
-
-        
     }
     render() {
         return (
@@ -47,8 +44,14 @@ class Hotel extends Component {
                                     <p className="price">£{hotel.price}</p>
                                 </span>
                             </header>
-                            <img src="" alt=""/>
-                            <button className="accordion"></button>
+                            
+                                
+                            <div className="hotel-image">
+                                <img src={hotel.image} alt=""/>
+                            </div>
+                            <button className="accordion">
+                                <p className="hotel-click-info">{hotel.date} for {hotel.days} from {hotel.from}, {hotel.adults} Adults & {hotel.children} children</p>
+                            </button>
                         </div> 
                     )
                 })}

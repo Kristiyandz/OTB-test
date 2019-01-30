@@ -14,7 +14,7 @@ const initialState = {
             children: 2,
             infants: 1,
             price: '1,136.50',
-            image: 'NO IMAGE',
+            image: require( '../../assets/image_01.png'),
             description: '****'
         },
         {
@@ -29,7 +29,7 @@ const initialState = {
             children: 2,
             infants: 0,
             price: '499.99',
-            image: 'NO IMAGE',
+            image:  require( '../../assets/image_02.png'),
             description: '****'
         },
         {
@@ -44,7 +44,7 @@ const initialState = {
             children: 1,
             infants: 0,
             price: '696.80',
-            image: 'NO IMAGE',
+            image: require( '../../assets/image_03.png'),
             description: '****'
         }
     ]
