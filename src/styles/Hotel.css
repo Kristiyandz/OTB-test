@@ -1,7 +1,6 @@
 .hotel {
     width: 100%;
     height: 350px;
-    border: 1px solid black;
     margin-top: 20px;
     background-color: yellow;
     position: relative;
@@ -10,7 +9,7 @@
     flex-direction: row;
 }
 .hotel-header, .hotel-bottom-accordion {
-    height: 80px;
+    /* height: 50px; */
     background-color: red
 }
 .accordion {
@@ -65,4 +64,38 @@
     top: -2px;
     vertical-align: text-top;
     color: white
+}
+.headingMain {
+    display:inline-block;
+    margin: 0px auto 10px auto;
+    text-align: left;
+    width: 80%;
+    flex-direction: row;
+}
+.headingMin {
+    width: 20%;
+    background-color: red;
+}
+.hotel-name {
+    margin: 0px;
+}
+.hotel-city {
+    margin: 0px;
+}
+#first {
+    width: 80%;
+    /* float: left; */
+    /* height: 50px; */
+    background-color: blue;
+    display: inline-block;
+}
+#second {
+    width: 20%;
+    /* float: left; */
+    /* height: 50px; */
+    background-color: green;
+    display: inline-block;
+}
+h2, h3 {
+    margin: 0;
 }

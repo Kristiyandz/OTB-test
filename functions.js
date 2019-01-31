@@ -131,15 +131,6 @@ function createNewState(prevState, action) {
       positionOne = -1;
       positionTwo = 1;
       key = 'name'
-  } else if(action === "SORT_BY_PRICE") {
-    
-      handlePriceSort(prevState)
-        .then(data => {
-      
-          console.log(data)
-          return;
-        })
-
   }
 
   return Object.assign({}, {

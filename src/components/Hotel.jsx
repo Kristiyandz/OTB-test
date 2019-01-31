@@ -35,15 +35,16 @@ class Hotel extends Component {
                 {this.props.hotels.map(hotel => {
                     return (
                         <div className="hotel">
-                            <header className="hotel-header">
-                                <span className="hotel-name">
-
-                                </span>
-                                <span className="hotel-price">
-                                    <p className="hotel-price-tag">hoilday price</p>
-                                    <p className="price">£{hotel.price}</p>
-                                </span>
-                            </header>
+                            
+                            <div id="container">
+                                <div id="first">
+                                    <h2>{hotel.name}</h2>
+                                    <h3>{hotel.city}</h3>
+                                </div>
+                                <div id="second">{hotel.price}</div>
+                            </div>
+                            
+                    
                             
                                 
                             <div className="hotel-image">
