@@ -2,7 +2,7 @@
     width: 100%;
     height: 350px;
     margin-top: 20px;
-    background-color: yellow;
+    background-color: whitesmoke;
     position: relative;
 }
 .hotel-header {
@@ -63,7 +63,7 @@
     position: absolute;
     top: -2px;
     vertical-align: text-top;
-    color: white
+    color: white;
 }
 .headingMain {
     display:inline-block;
@@ -86,7 +86,7 @@
     width: 80%;
     /* float: left; */
     /* height: 50px; */
-    background-color: blue;
+    background-color: #97acc5;
     display: inline-block;
 }
 #second {
@@ -98,4 +98,10 @@
 }
 h2, h3 {
     margin: 0;
+}
+.button-text-wrapper {
+    width: 100%;
+    height: 50px;
+    background-color: #67cfec;
+    margin:0;
 }

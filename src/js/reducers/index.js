@@ -89,7 +89,6 @@ function createNewState(prevState, action) {
 
     };
   
-  
     return prevState.hotels.sort((a, b) => {
         if(firstLogicalOperator(a[`${key}`],b[`${key}`])) {
             return positionOne;

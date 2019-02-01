@@ -41,7 +41,7 @@ class Hotel extends Component {
                                     <h2>{hotel.name}</h2>
                                     <h3>{hotel.city}</h3>
                                 </div>
-                                <div id="second">{hotel.price}</div>
+                                <p id="second">{hotel.price}</p>
                             </div>
                             
                     
@@ -50,9 +50,12 @@ class Hotel extends Component {
                             <div className="hotel-image">
                                 <img src={hotel.image} alt=""/>
                             </div>
-                            <button className="accordion">
+                            <div className="accordion">
+                            <button className="button-text-wrapper">
                                 <p className="hotel-click-info">{hotel.date} for {hotel.days} from {hotel.from}, {hotel.adults} Adults & {hotel.children} children</p>
                             </button>
+                               
+                            </div>
                         </div> 
                     )
                 })}
