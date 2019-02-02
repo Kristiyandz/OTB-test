@@ -1,6 +1,7 @@
 import { SORT_ALPHABETICALLY, SORT_BY_PRICE, SORT_BY_RATING } from '../constants/action-types';
 import createNewState from '../utils/name_and_rating_sort';
 import sortHotelByPrice from '../utils/sort_by_price';
+import { sampleText } from '../utils/dummy_text';
 
 
 const initialState = {
@@ -18,7 +19,7 @@ const initialState = {
             infants: 1,
             price: '1,136.50',
             image: require( '../../assets/image_01.png'),
-            description: '****'
+            description: sampleText()
         },
         {
             name: 'Aguamarina Golf Hotel and Apartments',
@@ -33,7 +34,7 @@ const initialState = {
             infants: 0,
             price: '499.99',
             image:  require( '../../assets/image_02.png'),
-            description: '****'
+            description: sampleText()
         },
         {
             name: 'Luna park II',
@@ -48,7 +49,7 @@ const initialState = {
             infants: 0,
             price: '696.80',
             image: require( '../../assets/image_03.png'),
-            description: '****'
+            description: sampleText()
         }
     ]
 };

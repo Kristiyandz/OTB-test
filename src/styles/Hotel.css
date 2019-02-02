@@ -4,6 +4,7 @@
     margin-top: 20px;
     background-color: whitesmoke;
     position: relative;
+    display: flex;
 }
 .hotel-header {
     flex-direction: row;
@@ -49,14 +50,15 @@
     font-size: 26px;
     text-decoration-style: solid;
     color: blue;
+    font-weight: bold;
 }
 .hotel-image {
     width:100%;
-    height:250px;
+    height:300px;
 }
 .hotel-image img {
     width:100%;
-    height:250px;
+    height:300px;
 }
 
 .hotel-click-info {
@@ -76,17 +78,30 @@
     width: 20%;
     background-color: red;
 }
-.hotel-name {
+#hotel-name {
     margin: 0px;
+    color: #0b3d7a;
+    padding-top: 5px;
+    padding-left: 5px;
+    font-family: Arial, Helvetica, sans-serif;
 }
-.hotel-city {
+#hotel-city {
     margin: 0px;
+    color: #0b3d7a;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#container {
+    display: flex;
+    width: 100%;
+    position: absolute;
 }
 #first {
-    width: 80%;
+    width: 79%;
     /* float: left; */
     /* height: 50px; */
-    background-color: #97acc5;
+    background: rgba(255, 255, 255, 0.6);
     display: inline-block;
 }
 #second {
@@ -96,12 +111,53 @@
     background-color: green;
     display: inline-block;
 }
-h2, h3 {
-    margin: 0;
-}
 .button-text-wrapper {
     width: 100%;
     height: 50px;
     background-color: #67cfec;
     margin:0;
+}
+.holiday-price {
+    width: 20%;
+    height: auto;
+    background-color: yellow;
+    margin-left: 1%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+#price {
+    color: #0b3d7a;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    float: right;
+    margin-right: 5px;
+    font-weight: bold;
+}
+#tag {
+    color: #0b3d7a;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    float: right;
+    margin-right: 5px;
+}
+.hotel-description {
+    visibility: hidden;
+}
+.expandable-content {
+    visibility: hidden;
+}
+.acc-info{
+    font-weight: bold;
+    color: white
+}
+svg.svg-inline--fa.fa-chevron-right.fa-w-10 {
+    float: right;
+    font-size: 20px;
+    color: white;
+}
+svg.svg-inline--fa.fa-chevron-down.fa-w-14 {
+    float: right;
+    font-size: 20px;
+    color: white;
 }
