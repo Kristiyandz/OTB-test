@@ -35,7 +35,7 @@ function sortHotelByPrice(state) {
         });
 
         if(formattedPrices[formattedPrices.length-1].length < 2){
-            formattedPrices[formattedPrices.length-1] = formattedPrices[formattedPrices.length-1].concat('0')
+            formattedPrices[formattedPrices.length-1] = formattedPrices[formattedPrices.length-1].concat('0');
         };
 
         hotel.price = formattedPrices.join('.');

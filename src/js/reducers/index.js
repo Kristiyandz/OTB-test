@@ -7,6 +7,21 @@ import { sampleText } from '../utils/dummy_text';
 const initialState = {
     hotels: [
         {
+            name: 'Aguamarina Golf Hotel and Apart-ments',
+            city: 'Costa Adeje',
+            country: 'Tenerife',
+            stars: 4,
+            date: '03-7-2014',
+            days: 7,
+            from: 'Manchester',
+            adults: 2,
+            children: 2,
+            infants: 0,
+            price: '499.99',
+            image:  require( '../../assets/image_02.png'),
+            description: sampleText()
+        },
+        {
             name: 'Costa Adeje Gran Hotel',
             city: 'Costa Adeje',
             country: 'Tenerife',
@@ -19,21 +34,6 @@ const initialState = {
             infants: 1,
             price: '1,136.50',
             image: require( '../../assets/image_01.png'),
-            description: sampleText()
-        },
-        {
-            name: 'Aguamarina Golf Hotel and Apartments',
-            city: 'Costa Adeje',
-            country: 'Tenerife',
-            stars: 4,
-            date: '03-7-2014',
-            days: 7,
-            from: 'Manchester',
-            adults: 2,
-            children: 2,
-            infants: 0,
-            price: '499.99',
-            image:  require( '../../assets/image_02.png'),
             description: sampleText()
         },
         {

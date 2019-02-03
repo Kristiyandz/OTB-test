@@ -1,24 +1,20 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStar, faChevronRight, faChevronDown } from '@fortawesome/free-solid-svg-icons'
+import { faStar, faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import '../styles/Hotel.css'
-import NavButtons from './NavButtons';
-import { counter } from '@fortawesome/fontawesome-svg-core';
 
 class Hotel extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            clicked: false
-        }
-        this.isClickedOnce = this.isClickedOnce.bind(this);
-    } 
+    
     componentDidMount() {
+
         const button = document.getElementsByClassName('accordion');
         const hotel = document.getElementsByClassName('hotel');
         const accordion = document.getElementsByClassName('accordion');
         const description = document.getElementsByClassName('hotel-description');
+        const icons = document.getElementsByTagName('svg');
+        const bookingBtn = document.getElementsByClassName('booking-btn');
+        
     
         let clickCount = 0;
 
@@ -26,58 +22,37 @@ class Hotel extends Component {
 
             button[i].addEventListener('click', () => {
 
-                
-
                 clickCount++;
+
                 if(clickCount % 2 === 0) {
+
                     hotel[i].style.height = "350px";
                     button[i].style.height = "50px";
                     accordion[i].style.bottom = "0px";
                     description[i].style.visibility = "hidden";
+                    icons[i].style.transform = "rotate(0deg)";
+                    bookingBtn[i].style.visibility = "hidden";
+
                 } else if(clickCount % 2 === 1) {
-                    hotel[i].style.height = "500px";
-                    button[i].style.height = "50px";
+
+                    hotel[i].style.height = "600px";
+                    button[i].style.height = "150px";
                     accordion[i].style.bottom = "150px";
                     description[i].style.visibility = "visible";
-
+                    icons[i].style.transform = "rotate(90deg)"
+                    bookingBtn[i].style.visibility = "visible";
+                    
                 };
             })
 
         };
-    }
-    isClickedOnce() {
-       
-
-          function  makeCount() {;
-            let count = 0;
-            return function () {
-                return count++;
-            }
-       }
-
-
-       let increment = makeCount();
-       increment()
-       console.log(increment())
-       if(increment() % 2 === 0) {
-        this.setState({
-            clicked: false
-        });
-        
-    } else if(increment() % 2 === 1) {
-        this.setState({
-            clickd: true
-        });
-        
-    }
-        
-    }
-    showDownChevron() {
-        return <FontAwesomeIcon icon={faChevronDown} />
-    }
-    showRightChevron() {
-        return <FontAwesomeIcon icon={faChevronRight} />
-    }
+    };
+    chevron() {
+        return <FontAwesomeIcon icon={faChevronRight} />;
+    };
+    generateStars() {
+        return <FontAwesomeIcon icon={faStar} />;
+    };
     accordionButtonInformation({date, days, from, adults, children, infants}) {
 
         let adultNumberFormatted = null;
@@ -89,7 +64,7 @@ class Hotel extends Component {
         if(adults === 1 ) {
             adultNumberFormatted = `${spanOpen}${date}${spanclose} for ${spanOpen}${days} days${spanclose} from ${spanOpen}${from}${spanclose}, ${spanOpen}${adults}${spanclose} Adults`;
         } else if(adults > 1) {
-            adultNumberFormatted = `${spanOpen}${date}${spanclose} for ${spanOpen}${days} days${spanclose} from $${spanOpen}${from}${spanclose}, ${spanOpen}${adults}${spanclose} Adults`;
+            adultNumberFormatted = `${spanOpen}${date}${spanclose} for ${spanOpen}${days} days${spanclose} from ${spanOpen}${from}${spanclose}, ${spanOpen}${adults}${spanclose} Adults`;
         } else if(adults === 0) {
             adultNumberFormatted = '';
         };
@@ -117,7 +92,7 @@ class Hotel extends Component {
         } else if(infantNumberFormatted === '') {
             return `${adultNumberFormatted} & ${childrenNumberFormatted}`;
         } else {
-            return `${adultNumberFormatted}, ${childrenNumberFormatted} & ${infantNumberFormatted}`;
+            return `${adultNumberFormatted},<br/> ${childrenNumberFormatted} & ${infantNumberFormatted}`;
         };
 
     }
@@ -128,28 +103,30 @@ class Hotel extends Component {
                     return (
                         <div className="hotel">
                             <div className="hotel-image">
-                            <div id="container">
-                                <div id="first">
-                                    <h2 id="hotel-name">{hotel.name}<span>{}</span></h2>
-                                    <p id="hotel-city">{hotel.city}, {hotel.country}</p>
-                                </div>
-                                <div className="holiday-price">
-                                    <div className="price-info">
-                                        <p id="tag">holiday price</p>
-                                        <p id="price">£{hotel.price}</p>
+
+                                <div id="container">
+                                    <div id="first">
+                                        <h2 id="hotel-name">{hotel.name}<span className="star-icon">{(()=>[...Array(hotel.stars)].map(()=>this.generateStars()))()}</span></h2>
+                                        <p id="hotel-city">{hotel.city}, {hotel.country}</p>
+                                    </div>
+                                    <div className="holiday-price">
+                                        <div className="price-info">
+                                            <p id="tag">holiday price</p>
+                                            <p id="price">£{hotel.price}</p>
+                                        </div>
                                     </div>
                                 </div>
-                                
-                            </div>
+
                                 <img src={hotel.image} alt=""/>
                             </div>
+
                             <div className="accordion">
-                                <button className="button-text-wrapper" onClick={this.isClickedOnce}>
+                                <button className="button-text-wrapper">
                                     <p className="hotel-click-info" dangerouslySetInnerHTML={{__html: this.accordionButtonInformation(hotel)}}></p>
-                                   {this.state.clicked ? this.showDownChevron() : this.showRightChevron()}
+                                   {this.chevron()}
                                 </button>
-                            <p className="hotel-description">{hotel.description}</p>
-                               
+                                <p className="hotel-description">{hotel.description}</p>
+                                <button className="booking-btn">BOOK NOW</button>
                             </div>
                         </div> 
                     )

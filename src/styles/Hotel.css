@@ -10,7 +10,6 @@
     flex-direction: row;
 }
 .hotel-header, .hotel-bottom-accordion {
-    /* height: 50px; */
     background-color: red
 }
 .accordion {
@@ -42,7 +41,6 @@
 }
 .hotel-price-tag {
     font-size: 16px;
-    /* margin-top: 2px; */
     word-wrap: none;
 }
 .price {
@@ -66,6 +64,7 @@
     top: -2px;
     vertical-align: text-top;
     color: white;
+    font-size: 15px;
 }
 .headingMain {
     display:inline-block;
@@ -99,15 +98,11 @@
 }
 #first {
     width: 79%;
-    /* float: left; */
-    /* height: 50px; */
     background: rgba(255, 255, 255, 0.6);
     display: inline-block;
 }
 #second {
     width: 20%;
-    /* float: left; */
-    /* height: 50px; */
     background-color: green;
     display: inline-block;
 }
@@ -116,6 +111,7 @@
     height: 50px;
     background-color: #67cfec;
     margin:0;
+    text-align: left;
 }
 .holiday-price {
     width: 20%;
@@ -143,6 +139,7 @@
 }
 .hotel-description {
     visibility: hidden;
+    margin: 10px;
 }
 .expandable-content {
     visibility: hidden;
@@ -160,4 +157,20 @@ svg.svg-inline--fa.fa-chevron-down.fa-w-14 {
     float: right;
     font-size: 20px;
     color: white;
+}
+.booking-btn {
+    width: 150px;
+    height: 50px;
+    background-color: rgb(12, 12, 104);
+    position: absolute;
+    margin-left: 35%;
+    color: white;
+    border-radius: 5px;
+    font-size: 20px;
+    visibility: hidden;
+}
+.star-icon {
+    font-size: 17px;
+    margin: 10px;
+    color: orange;
 }

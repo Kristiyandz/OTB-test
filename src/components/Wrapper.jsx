@@ -9,7 +9,6 @@ class Wrapper extends Component {
             <section className="wrapper">
                 <NavBtns/>
                 <Hotels />
-                
             </section>
         );
     };

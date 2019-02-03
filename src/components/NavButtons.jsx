@@ -5,7 +5,6 @@ import '../styles/Navigation.css';
 
 export class NavBtns extends Component {
     render() {
-        console.log(this.props);
         return (
             <header>
                 <button className="nav-btn" onClick={() => this.props.sortAlphabetically()}>sort alphabetically</button>
