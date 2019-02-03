@@ -146,14 +146,10 @@
 }
 .acc-info{
     font-weight: bold;
-    color: white
+    color: white;
+    font-weight: bold;
 }
 svg.svg-inline--fa.fa-chevron-right.fa-w-10 {
-    float: right;
-    font-size: 20px;
-    color: white;
-}
-svg.svg-inline--fa.fa-chevron-down.fa-w-14 {
     float: right;
     font-size: 20px;
     color: white;

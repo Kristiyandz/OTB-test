@@ -1,9 +1,26 @@
 header {
     width: 100%;
-    background-color: whitesmoke;
     display: flex;
     justify-content: space-between;
 }
 .nav-btn  {
-    width: 25%;
+    width: 30%;
+    height: 60px;
+    background-color: #c4f6fb;
+    color: #67cfec;
+    font-size: 14px;
+    border: none;
+    -webkit-box-shadow: 1px 5px 12px -9px black;
+       -moz-box-shadow: 1px 5px 12px -9px black;
+            box-shadow: 1px 5px 12px -9px black;
+}
+.sort-option {
+    font-weight: bold;
+}
+.nav-btn:focus {
+    background-color: #5287c7;
+    color: white;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+         box-shadow: none;
 }

@@ -12,10 +12,12 @@ class Hotel extends Component {
         const hotel = document.getElementsByClassName('hotel');
         const accordion = document.getElementsByClassName('accordion');
         const description = document.getElementsByClassName('hotel-description');
-        const icons = document.getElementsByTagName('svg');
+        const icons = document.getElementsByClassName('chevron');
         const bookingBtn = document.getElementsByClassName('booking-btn');
+        const accordionTitle = document.getElementById('gran-hotel');
+
+        accordionTitle.style.top = "-8px";
         
-    
         let clickCount = 0;
 
         for(let i = 0; i < button.length; i++) {
@@ -48,7 +50,7 @@ class Hotel extends Component {
         };
     };
     chevron() {
-        return <FontAwesomeIcon icon={faChevronRight} />;
+        return <FontAwesomeIcon className="chevron" icon={faChevronRight} />;
     };
     generateStars() {
         return <FontAwesomeIcon icon={faStar} />;
@@ -58,7 +60,7 @@ class Hotel extends Component {
         let adultNumberFormatted = null;
         let childrenNumberFormatted = null;
         let infantNumberFormatted = null;
-        const spanOpen = '<span className="acc-info">';
+        const spanOpen = '<span class="acc-info">';
         const spanclose = '</span>';
 
         if(adults === 1 ) {
@@ -122,7 +124,7 @@ class Hotel extends Component {
 
                             <div className="accordion">
                                 <button className="button-text-wrapper">
-                                    <p className="hotel-click-info" dangerouslySetInnerHTML={{__html: this.accordionButtonInformation(hotel)}}></p>
+                                    <p className="hotel-click-info" id={hotel.id} dangerouslySetInnerHTML={{__html: this.accordionButtonInformation(hotel)}}></p>
                                    {this.chevron()}
                                 </button>
                                 <p className="hotel-description">{hotel.description}</p>

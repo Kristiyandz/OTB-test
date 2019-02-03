@@ -2,6 +2,7 @@ import { SORT_ALPHABETICALLY, SORT_BY_PRICE, SORT_BY_RATING } from '../constants
 import createNewState from '../utils/name_and_rating_sort';
 import sortHotelByPrice from '../utils/sort_by_price';
 import { sampleText } from '../utils/dummy_text';
+import { formatDate } from '../utils/format_date';
 
 
 const initialState = {
@@ -11,7 +12,7 @@ const initialState = {
             city: 'Costa Adeje',
             country: 'Tenerife',
             stars: 4,
-            date: '03-7-2014',
+            date: formatDate(new Date('03-7-2014')),
             days: 7,
             from: 'Manchester',
             adults: 2,
@@ -19,14 +20,15 @@ const initialState = {
             infants: 0,
             price: '499.99',
             image:  require( '../../assets/image_02.png'),
-            description: sampleText()
+            description: sampleText(),
+            id: 'golf-hotel'
         },
         {
             name: 'Costa Adeje Gran Hotel',
             city: 'Costa Adeje',
             country: 'Tenerife',
             stars: 5,
-            date: '03-07-2014',
+            date: formatDate(new Date('03-07-2014')),
             days: 7,
             from: 'East Midlands',
             adults: 2,
@@ -34,7 +36,8 @@ const initialState = {
             infants: 1,
             price: '1,136.50',
             image: require( '../../assets/image_01.png'),
-            description: sampleText()
+            description: sampleText(),
+            id: 'gran-hotel'
         },
         {
             name: 'Luna park II',
@@ -43,13 +46,14 @@ const initialState = {
             days: 7,
             from: 'Liverpool',
             stars: 3,
-            date: '27-5-2014',
+            date: formatDate(new Date('2014-05-27')),
             adults: 2,
             children: 1,
             infants: 0,
             price: '696.80',
             image: require( '../../assets/image_03.png'),
-            description: sampleText()
+            description: sampleText(),
+            id: 'luna-park'
         }
     ]
 };
