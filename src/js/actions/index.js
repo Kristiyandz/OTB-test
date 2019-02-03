@@ -20,7 +20,6 @@ export function sortByPrice(){
 };
 
 export function sortByRating(){
-    console.log('RATING SORTING...');
     return function(dispatch) {
         dispatch({
             type: SORT_BY_RATING,

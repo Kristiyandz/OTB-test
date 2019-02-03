@@ -13,6 +13,10 @@ header {
     -webkit-box-shadow: 1px 5px 12px -9px black;
        -moz-box-shadow: 1px 5px 12px -9px black;
             box-shadow: 1px 5px 12px -9px black;
+            text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .sort-option {
     font-weight: bold;

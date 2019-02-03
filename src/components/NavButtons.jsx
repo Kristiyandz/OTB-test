@@ -7,9 +7,9 @@ export class NavBtns extends Component {
     render() {
         return (
             <header>
-                <button className="nav-btn" onClick={() => this.props.sortAlphabetically()}>sort <span className="sort-option">alphabetically</span></button>
-                <button className="nav-btn" onClick={() => this.props.sortByPrice()}>sort by <span className="sort-option">price</span></button>
-                <button className="nav-btn" onClick={() => this.props.sortByRating()}>sort by <span className="sort-option">start rating</span></button>
+                <span className="nav-btn" tabIndex="1" onClick={() => this.props.sortAlphabetically()}>sort &nbsp; <span className="sort-option">alphabetically</span></span>
+                <span className="nav-btn" tabIndex="2" onClick={() => this.props.sortByPrice()}>sort by &nbsp; <span className="sort-option">price</span></span>
+                <span className="nav-btn" tabIndex="3" onClick={() => this.props.sortByRating()}>sort by &nbsp; <span className="sort-option">start rating</span></span>
             </header>
         );
     };

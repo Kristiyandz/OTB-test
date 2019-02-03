@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStar, faChevronRight } from '@fortawesome/free-solid-svg-icons'
-import '../styles/Hotel.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import '../styles/Hotel.css';
 
 class Hotel extends Component {
     
@@ -45,7 +45,7 @@ class Hotel extends Component {
                     bookingBtn[i].style.visibility = "visible";
                     
                 };
-            })
+            });
 
         };
     };
@@ -131,7 +131,7 @@ class Hotel extends Component {
                                 <button className="booking-btn">BOOK NOW</button>
                             </div>
                         </div> 
-                    )
+                    );
                 })}
                
             </section>

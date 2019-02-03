@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import Wrapper from './components/Wrapper';
 import './styles/App.css';
 
